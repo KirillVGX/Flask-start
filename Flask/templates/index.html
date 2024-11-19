@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML. Study project</title>
+    </head>
+    <body>
+        <header></header>
+        <main>
+            {% for city in sities %}
+            <h1 style = 'font: 50px;' align = 'right'>Name: {{ sity['name_'] }}</h1>
+            <h1 style = 'font: 50px;' align = 'right'>Population: {{ sity['population_'] }}</h1>
+            <h1 style = 'font: 50px;' align = 'right'>Descripyion: {{ sity['description_'] }}</h1>
+            <h1 style = 'font: 50px;' align = 'right'>year_of_foundation: {{ sity['year_of_foundation_'] }}</h1>
+            <img src="{{ sity[image_] }}" width="800px", height="800px">
+            <h3>Не знайшли свого міста? Клікніть<a target = '_blank' href="{{url_for(add_city)}}"></a></h3>
+            {% endfor %}
+        </main>
+        <footer></footer>
+    </body>
+</html>
